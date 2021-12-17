@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="icon" href="logo.svg" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <link rel="stylesheet" href="login.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    
+
+    <main>
+        <div class="main-container">
+            <div class="container">
+
+                <div class="form-container" id="sign-up-section">
+                    <div class="title">
+                        <h4>Register now</h4>
+                        <h2>Sign up for free.</h2>
+                        <h4 style="color: #7B7B7B;" class="nav-question">
+                            Already have an acount? <a href="#" id="navigateToSignInBtn">Sign in.</a>
+                        </h4>
+                    </div>
+                    <form action="" onsubmit="return false">
+
+                        <div class="form-control">
+                            <label>Username</label>
+                            <div class="textfield">
+                                <input type="text" placeholder="your username" name="username" />
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label>E-mail</label>
+                            <div class="textfield">
+                                <input type="email" placeholder="your email" name="email" />
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label>Password</label>
+                            <div class="textfield">
+                                <input type="password" placeholder="password" name="password" />
+                            </div>
+
+                        </div>
+
+                        <button>Sign up</button>
+
+
+                    </form>
+                </div>
+
+                <div class="form-container sign-in-hidden" id="sign-in-section">
+                    <div class="title">
+                        <h4>Start your journey</h4>
+                        <h2>Sign in for free.</h2>
+                        <h4 style="color: #7B7B7B;" class="nav-question">
+                            Don't have an acount? <a href="#" id="navigateToSignUpBtn">Sign Up.</a>
+                        </h4>
+                    </div>
+                    <form action="" style="height: 280px" onsubmit="return false">
+                        <!-- <div class="form-control">
+                            <label>Username</label>
+                            <div class="textfield">
+                                <input type="text" placeholder="yourusername" name="username" />
+                            </div>
+                        </div> -->
+
+                        <div class="form-control">
+                            <label>E-mail</label>
+                            <div class="textfield">
+                                <input type="email" placeholder="your email" name="email" />
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label>Password</label>
+                            <div class="textfield">
+                                <input type="password" placeholder="password" name="password" />
+                            </div>
+
+                        </div>
+
+                        <button>Sign In</button>
+
+
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="navigation navigation-sign-in" id="navigation-container">
+
+            </div>
+        </div>
+    </main>
+    <a href='https://pngtree.com/free-backgrounds'>free background photos from pngtree.com/</a>
+  
+    <script>
+        function navigateToSignIn(event) {
+
+            // $('#sign-up-section').removeClass('sign-up-container');
+            // $('#sign-up-section').addClass('sign-up-container-hidden');
+
+            $('#navigation-container').removeClass('navigation-sign-in');
+            $('#navigation-container').addClass('navigation-sign-up');
+
+            $('#sign-up-section').addClass('sign-up-hidden');
+            $('#sign-in-section').removeClass('sign-in-hidden');
+
+            event.preventDefault();
+        }
+
+        function navigateToSignUp(event) {
+            $('#navigation-container').addClass('navigation-sign-in');
+            $('#navigation-container').removeClass('navigation-sign-up');
+
+            $('#sign-up-section').removeClass('sign-up-hidden');
+            $('#sign-in-section').addClass('sign-in-hidden');
+
+
+            event.preventDefault();
+        }
+
+        $('#navigateToSignInBtn').click(navigateToSignIn);
+
+        $('#navigateToSignUpBtn').click(navigateToSignUp);
+    </script>
+</body>
+
+</html>

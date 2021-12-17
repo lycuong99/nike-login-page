@@ -1,0 +1,292 @@
+@font-face {
+    font-family: futura;
+    src: url("fonts/futur.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: futuraitalic;
+    src: url("fonts/Futura Bold Italic font.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: futurabook;
+    src: url("fonts/Futura Book font.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: futurabt;
+    src: url("fonts/Futura XBlk BT.ttf");
+    font-style: normal;
+}
+
+html {
+    line-height: 1.15;
+    /* font-size: 16px; */
+    /* -webkit-text-size-adjust: 100%; */
+    font-size: 14px;
+}
+
+html * {
+    font-family: futurabook, sans-serif;
+    font-weight: 900;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-size: 16px; */
+    min-width: 320px;
+}
+
+ul,
+h2,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    font-weight: 600;
+}
+
+main button {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-input {
+    border: 2px solid black;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #ff5129;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-weight: 300;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    /* background-image: url("./bg02.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center; */
+    background-color: #1f2223;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}
+
+.main-container {
+    width: 1200px;
+    height: 45em;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: 10;
+}
+
+
+/*  FORM */
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 11;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 400px;
+}
+
+.form-container {
+    transition: all 0.25s ease-in;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 54px;
+}
+
+@media screen and (max-width: 1200px) {
+    .form-container {
+        width: 50%;
+        padding: 36px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        padding: 36px 30px;
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-family: futurabt;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sign-up-hidden {
+    transform: translateX(-44px);
+    opacity: 0.1;
+}
+
+.sign-in-hidden {
+    transform: translateX(44px);
+    opacity: 0.1;
+}
+
+@media screen and (max-width: 768px) {
+    .sign-up-hidden {
+        display: none;
+    }
+    .sign-in-hidden {
+        display: none;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+
+/* .form-container form {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+/* Img */
+
+.navigation {
+    border-radius: 28px;
+    width: 60%;
+    z-index: 12;
+    height: 100%;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+    right: 0;
+    /* transition: right 2s linear; */
+}
+
+.navigation-sign-in {
+    right: 0;
+    /* background-color: violet; */
+    background-image: url("https://i.pinimg.com/originals/18/9d/dc/189ddc1221d9c1c779dda4ad37a35fa1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation-sign-up {
+    right: 40%;
+    background-color: rgb(130, 164, 238);
+    background-image: url("https://footwearnews.com/wp-content/uploads/2015/12/2015-nike-mag-02.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+    .navigation {
+        width: 50%;
+    }
+    .navigation-sign-up {
+        right: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}
+
+.textfield {
+    border-radius: 2px;
+    height: 56px;
+    border: 1px solid #ced4da;
+    margin-top: 5px;
+    box-sizing: content-box;
+}
+
+.textfield:focus-within {
+    border: 2px solid #adb3b8;
+}
+
+input {
+    border: none;
+    padding: 15px 15px;
+    height: 100%;
+    width: 100%;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: rgb(53, 51, 51);
+}
